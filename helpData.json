@@ -1,0 +1,80 @@
+{
+	"pageTitle" : "Help",
+	"navLink" : [
+		{
+		"title": "Homepage",
+		"url" : "/homepage"	
+		},
+		{
+		"title": "Log Plastic",
+		"url" : "/logpage"	
+		},
+		{
+		"title": "Log History",
+		"url" : "/history"	
+		},
+		{
+		"title": "Share",
+		"url" : "/share"	
+		},
+		{
+		"title": "Sustainability Tips",
+		"url" : "/tips"	
+		},
+		{
+		"title": "Settings",
+		"url" : "/settings"	
+		}
+	],
+	"navIcon" : [
+		{
+		"src" : "assets/user_icon_s.png",
+		"url" : "/settings"
+		},
+		{
+		"src" : "assets/home_S.png",
+		"url" : "/homepage"
+		}
+	],
+	"help": [
+		{
+			"title": "How to use Plastrack",
+			"desc":  "Using Plastrack is simple! First, go to the Log a Plastic page. From here, you can add a new type of plastic, or log a plastic of one of our existing profiles! Once you do that, you can check your progress on the Log History page, and share that progress with your friends to form goals and help with accountability!"
+		},
+		{
+			"title": "Why Plastrack?",
+			"desc":  "Unlike other tracking apps, Plastrack sole focus is on tracking your single-use plastic usage. This focus makes the core activity loop of Plastrack much simple and quicker than other apps out there, without sacrificng any of their advanced functions!"
+		},
+		{
+			"title": "How do I log a plastic?",
+			"desc":  "Simply drag your plastic of choice from th left and drop it onto the recycling bin. Repeat this until everything's in, at which point you can click on the bin to finalize logging."
+
+		},
+		{
+			"title": "I added a plastic to the bin accidentally, and I don't know how to remove it!",
+			"desc":  "Click on the name of the plastic in the box above the bin!"
+
+		},
+		{
+			"title": "How do I add a new plastic type?",
+			"desc":  "To add a new plastic type, go to the Log a Plastic page and click on Add Plastic Type. You'll have the option to give your new type a name, size, and icon to represent it."
+
+		},
+		{
+			"title": "My new plastic type isn't showing up!",
+			"desc":  "Try scrolling down the list or using the searchbar above the plastic type list. "
+
+		},
+		{
+			"title": "I accidentally deleted one of the default profiles, and I don't know how to get them back!",
+			"desc":  "Don't worry - simply reload the page and they'll be back, good as new! It also doesn't affect any of your already logged plastics."
+
+		},
+		{
+			"title": "My problem isn't covered by any of these!",
+			"desc":  "Send us an email at support@plastrack.com, and we'll help personally troubleshoot your issue as soon as possible!"
+
+		}
+		
+	]
+}

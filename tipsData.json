@@ -1,0 +1,72 @@
+{
+	"navLink" : [
+		{
+		"title": "Homepage",
+		"url" : "/homepage"	
+		},
+		{
+		"title": "Log Plastic",
+		"url" : "/logpage"	
+		},
+		{
+		"title": "Log History",
+		"url" : "/history"	
+		},
+		{
+		"title": "Share",
+		"url" : "/share"	
+		},
+		{
+		"title": "Settings",
+		"url" : "/settings"	
+		},
+		{
+		"title": "Help",
+		"url" : "/help"	
+		}
+	],
+	"navIcon" : [
+		{
+		"src" : "assets/user_icon_s.png",
+		"link-title": "settings",
+		"url" : "/settings"
+		},
+		{
+		"src" : "assets/home_S.png",
+		"link-title": "homepage",
+		"url" : "/homepage"
+		}
+	],
+	"moduleTitle": "Everyday Steps You Can Take to Reduce Your Plastic Usage",
+	"moduleTitle2": "The Bigger Picture: Why Sustainability Matters",
+	"tips": [
+		{
+			"title": "Coffee or boba fiend? Bring a reusable cup to the café!",
+			"desc": "If you're a tea person, opt for loose-leaf rather than teabags to minimize waste."
+		},
+		{
+			"title": "Forget your reusable cup? Ask for a paper one!",
+			"desc": "Most eateries will have paper cups on demand - and while these paper cups may be coated in thin layers of wax/plastic, they're far more environmentally friendly than their fully plastic counterparts. "
+		},
+		{
+			"title": "Going shopping? Bring a cloth bag!",
+			"desc": "In the same vein as using reuseable cups, using plastic bags when shopping greatly reduces your local plastic footprint. Be careful - sometimes workers will begin bagging your items automatically if you don't put down or inform them of your cloth bag beforehand!"
+		},
+		{
+			"title": "Buy in bulk at the grocery store",
+			"desc": "Buying in bulk saves the plastic that would be used from each individual, smaller package of that same item."
+		}
+		],
+		"info": [
+		{
+			"title": "How Much Plastic Actually Gets Recycled?",
+			"desc": "Only around 9% of plastic gets processed and recycled, though thsi number varies depending on the type of plastic. This is both due to people not properly disposing of their recyclable materials AND because our current systems for handling recyclable materials are implemented ireegularly. "
+		},
+		{
+			"title": "Your Role in Helping Alleviate the Global Waste Crisis",
+			"desc": "Ultimately, the greater problem are the corporations who have a vested interest in maintaining the current production cycles that make plastic so pervervasive, and some feel that shifts to personal responsibility detract from this issue. However, here at Plastrack,  we believe that individual mitigation can stand alongside advocating for systemic change. "
+		}
+		],
+		"plastrackTitle" : "How Plastrack Can Help",
+		"plastrackDesc" : "We believe that 100% of people achieving imperfect sustainability can do more than just a few people being perfect. Plastrack can help you sustain measured steps towards your goal of reducing your dependence on single-use plastics."
+}

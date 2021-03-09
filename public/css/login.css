@@ -1,0 +1,137 @@
+
+ body {
+   	font-family: 'Manjari', sans-serif;
+   	font-size: 14px;
+     background-image: linear-gradient(179deg, #314882, #8C9EC0 20%, #768CB6, #cfcfcf 80%, #c0c0c0 85%, #D2CC76);
+     background-position: center;
+    }
+
+
+h1 {
+font-family: 'Reem Kufi', sans-serif;
+	font-size: 75px;
+	letter-spacing: -2px;
+	background-color: #768CB6;
+	color: #DFD32B;
+	margin: 100px auto;
+	padding: 10px;
+	text-align: center;
+	text-shadow: 3px 2px 1px #314882;
+	box-shadow: 0 12px 16px 0 #314882, 0 17px 30px 0 #314882;
+}
+a {
+	color: #fff;
+	font-weight: bold;
+}
+
+#formContainer{
+	background-color: #8C9EC0;
+	box-shadow: 6px 6px 6px #314882;
+	border-radius: 30px;
+	width: 85%;
+	height: 45%;
+	margin: 10px auto;
+}
+
+#header{
+	width: 100%;
+	height:10px;
+}
+
+#email {
+	background-color: #768CB6;
+	color: white;
+	width: 90%;
+	height: 40px;
+	padding-left: 5px;
+	display: block;
+	margin: 25 auto;
+	border: none;
+	outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+#password{
+	background-color: #768CB6;
+	color: white;
+	padding-left: 5px;
+	width: 90%;
+	height: 40px;
+	display: block;
+	margin: 10 auto;
+	border: none;
+	outline: none;
+}
+
+#buttons{
+	width: 90%;
+	margin: auto;
+}
+
+#signUp{
+	background-color: #396B43;
+	color: white;
+	border: none;
+	font-weight: bold;
+	width: 35%;
+	padding: 15px 15px;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+#signIn{
+	background-color:#314882;
+	color: white;
+	font-weight: bold;
+	border: none;
+	width: 100%;
+	padding: 15px 15px;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 3px 2px 1px #15203B;
+	display: inline-block;
+	font-size: 15px;
+}
+
+#signIn2{
+	background-color:#314882;
+	color: white;
+	font-weight: bold;
+	border: none;
+	width: 50%;
+	padding: 15px 15px;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+}
+
+#signOut{
+	background-color: #333;
+	color: white;
+	font-weight: bold;
+	border: none;
+	padding: 15px 32px;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	margin-top: 12px;
+	margin-left: 113px;
+}
+
+button:hover{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

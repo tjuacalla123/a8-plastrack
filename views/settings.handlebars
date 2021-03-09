@@ -1,0 +1,219 @@
+<html>
+
+<head>
+	<title>Settings</title>
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<link href = "css/bootstrap.min.css" rel = "stylesheet">
+	<link href = "css/bootstrap-theme.min.css" rel = "stylesheet">
+	<link href = "css/sharensetting.css" rel = "stylesheet">
+	<link href = "css/navbar.css" rel = "stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     	https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+	<script src="js/settingsfirebase.js"></script>
+	<script src="js/settings.js"></script>
+</head>
+
+<body>
+	<div class="col-xs-12" id=space>
+		<div class="jumbotron navigation-bar">
+			<div class="dropdown">
+				<img id = side-button src="assets/hamburger.png" style="max-width:100%; max-height:100%;"></img>
+				<div class="dropdown-content">
+				{{#each navLink}}
+				<a class="links-hidden" href="{{url}}"><p class="dropdown-font"><p>{{title}}</p></a>
+				{{/each}}
+				</div>
+			</div>
+			
+				{{#each navIcon}}
+				<div class="home-btn">
+					<button class="settings">
+						<a href="{{url}}"><img src="{{src}}" style="max-width:75%; max-height:75%;"></img></a>
+					</button>
+				</div>
+				{{/each}}
+
+		</div>
+	</div>
+	<div class="container">
+		<div class ="row">
+			<div class = "col-xs-10 col-xs-offset-1 title">
+					<h1 class = "plastrack" > {{pageTitle}}</h1>
+			</div>
+		</div>
+
+<div class="wrapper">
+
+	<div class="flex-grid-half">
+
+	  	<div class="col"> 
+	  		<div class="circle">
+       <!-- User Profile Image -->
+       		<img class="profile-pic" src="/assets/userpic_placeholder.png" >
+
+       <!-- Default Image -->
+       <!-- <i class="fa fa-user fa-5x"></i> -->
+    		 </div>
+    		</div> 
+
+	  	<div class="col">
+
+	  		<div class="red"> 
+    		<div class="green"><div class="displayName"></div></div>
+   			 <div class="blue"><p id="username"></p></div>
+  			</div>
+
+    	 </div>
+	</div> 
+
+     <div class="flex-grid-half">
+
+		<div class="col2">
+				 <div class="p-image">
+	  	 	<!--
+       		<i class="fa fa-camera upload-button"></i>
+       		 <input class="file-upload" type="file" accept="image/*"/>-->
+		<div class="new_Btn">Upload Userpic</div><br>
+		<input id="html_btn" type='file'><br>
+
+     	</div>      
+
+			</div>
+			<div class="col2">
+				<div id="sign-out-container">
+	  		<button onclick="signOut()" id="signOut"> Sign Out </button>
+	  	</div>
+
+	  	</div>
+	</div>
+
+
+</div>
+
+		{{#if friends}}
+	{{#each friends}}
+				<div class="row">
+				<div class="col-xs-12 share">
+					<div class="well set-share">
+						<div class="setting-text">
+							<p class="set-text">{{title1}}</p>
+						</div>
+						<div class="set-box">
+							{{name}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 share">
+					<div class="well set-share">
+						<div class="setting-text">
+							<p class="set-text">{{title2}}</p>
+						</div>
+						<div class="set-box">
+							{{occupation}}
+						</div>
+					</div>
+				</div>
+			</div>
+		{{/each}}
+
+		{{else}}
+		{{/if}}
+
+		<!--
+		{{#each slider}}	
+			<div class="row">
+				<div class="col-xs-12 share">
+					<div class="well set-share">
+						<div class="setting-text">
+							<p class="set-text">{{title}}</p>
+						</div>
+						<div class="set-box">
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+			
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1">
+					<div class="integrate">
+						<input type="submit" value="{{saveBtnTitle}}" id = integration>
+					</div>
+				</div>
+			</div>						-->		
+		
+		<!--
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-3 submit">
+				<input type="submit" value="Save" id = save-btn>
+			</div>
+		</div>
+	
+	<form id="addFriendForm" role="form" method="get" action="/add">
+		<h3>Add a Display Name</h3>
+	    <div class="form-group">
+	      <label for="name">Name:</label>
+	      <input type="text" class="form-control" id="name" placeholder="name" name="name">
+	    </div>
+	    <div class="form-group">
+	      <label for="occupation">Occupation:</label>
+	      <input type="text" class="form-control" id="occupation" placeholder="occupation" name="occupation">
+	    </div>
+	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the info"></input>
+	</form>
+	<hr> -->
+
+	<div class="wrapper">
+  <div class="row">
+    <div class="col-xs-12">
+      <button type="button" class="button" data-toggle="modal" data-target="#myModal2">Add your Name and Occupation &raquo;</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add your Name and Occupation</h4>
+      </div>
+      <div class="modal-body">
+
+	<form id="addFriendForm" role="form" method="get" action="/add">
+	    <div class="form-group">
+	      <label for="name">Name:</label>
+	      <input type="text" class="form-control" id="name" placeholder="your name" name="name">
+	    </div>
+	    <div class="form-group">
+	      <label for="occupation">Occupation:</label>
+	      <input type="text" class="form-control" id="occupation" placeholder="your occupation" name="occupation">
+	    </div>
+	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the info"></input>
+	</form>
+
+	</div>
+</body>
+
+</html>

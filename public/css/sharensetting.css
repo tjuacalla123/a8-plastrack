@@ -1,0 +1,471 @@
+ body {
+  font-family: 'Manjari', sans-serif;
+  color: #15203B;
+  background-image: linear-gradient(175deg, #314882, #8C9EC0 22%, #c0c0c0 65%, #8C9EC0 99%);
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+h1.plastrack{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 32px;
+    color:#DFD32B;
+    text-shadow: 2px 1px 1px #333;
+}
+
+.red {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.green {
+  height: 20px;
+}
+.blue {
+  color: white;
+  background: transparent;
+}
+
+
+.profile-pic {
+    width: 85px;
+    display: block;
+}
+
+.file-upload {
+    display: inline-block;
+}
+.circle {
+    border-radius: 1000px !important;
+    overflow: hidden;
+    margin-left: 50px;
+    width: 85px;
+    height: 85px;
+    box-shadow: 3px 2px 3px #15203B;
+    z-index: 99;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+}
+
+
+.new_Btn {
+   font-weight: normal;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  background-color: #8C9EC0;
+  margin: 40px 0px 0px 25px;
+  line-height: 20px;
+  border-radius: 15px;
+  border-left: 2px solid #5F77A6;
+  border-top: 2px solid #5F77A6;
+  box-shadow: 5px 5px #314882;
+  text-shadow: 2px 1px 1px #5F77A6;
+}
+.selected{
+}
+
+#html_btn {
+ display:none;
+}
+.wrapper {
+   display: flex;
+  flex-flow: column wrap;
+  height: auto;
+}
+
+.flex-grid-half {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-grid-half .col {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex: 0 0 52%;
+  padding: 0px;
+  margin: -1px 16px 5px -10px;
+  background: transparent; 
+}
+
+.flex-grid-half .col2 {
+   display: flex;
+   font-size: 16px;
+   line-height: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  flex: 0 0 52%;
+  margin: -1px 0px 25px 0px;
+  background: transparent; 
+}
+
+
+.flex-grid-half .col2 #signOut{
+  font-weight: normal;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #5F77A6;
+  margin: 5px 0px 0px 0px;
+  line-height: 20px;
+  border-radius: 15px;
+  border-left: 2px solid #8C9EC0;
+  border-bottom: 0px;
+  border-right: 0px;
+  border-top: 2px solid #8C9EC0;
+  box-shadow: 5px 5px #8C9EC0;
+  text-shadow: 2px 1px 1px #333;
+  outline: none;
+}
+
+
+.send-progress, .view-progress, .settings-list{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 0;
+}
+.send-progress, .view-progress {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0px 0px 10px 0px;
+}
+
+.space {
+  position: fixed;
+  z-index: 1;
+}
+
+.share-text {
+  font-size: 10px;
+}
+.set-text {
+  font-size: 15px;
+}
+.share-text, .set-text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.well, .jumbotron, #choose-boxes, #choose-settings, #send-btn, #send-btn2, #save-btn, #integration {
+  border-radius: 20px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+}
+#choose-boxes {
+  width: 200px;
+}
+#choose-settings {
+  width: 100px;
+}
+
+#username {
+  font-size: 15px;
+  height: 50px;
+  width: 50%;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  top: 50%;
+}
+
+.sign-out-box{
+  width: 30%;
+
+}
+#sign-out-container {
+    display: flex;
+  align-items: center;
+    justify-content: space-between;
+  margin: auto;
+  width: 50%;
+  height: 50px;
+}
+
+.text, .setting-text {
+  height: 50px;
+  position: relative;
+  margin: 0;
+}
+.text {
+  width: 100%;
+}
+.setting-text {
+  width: 60%;
+}
+.share, .submit {
+  display: flex;
+  justify-content: center;
+}
+.row-share, .row-share1, .set-share {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.row-share {
+  margin: auto 0;
+  justify-content: space-between;
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+  height: 50px;
+}
+
+.set-share {
+  justify-content: space-between;
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+  height: 50px;
+}
+.integrate {
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+}
+.choose-box, .set-box {
+  height: 50%;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: left;
+}
+
+.choose-box {
+  width: 60%;
+}
+
+.set-box {
+  width: 30%;
+}
+#send-btn, #save-btn, #send-btn2{
+  width: 100%;
+}
+
+#integration {
+  width: 100%;
+  height: 120px;
+}
+
+
+
+/* Code for the switch, from w3schools */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.button {
+    font-family: 'Lexend Deca', sans-serif;
+font-size: 20px;
+  color: white;
+  background-color: #8C9EC0;
+  margin: 0px 0px 20px 0px;
+  line-height: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 2px solid #5F77A6;
+  border-top: 2px solid #5F77A6;
+  border-bottom: 0px;
+  border-right: 0px;
+  box-shadow: 5px 5px #314882;
+  text-shadow: 2px 1px 1px #5F77A6;
+    outline: none;
+}
+
+input[type=button]:focus{
+  outline: none;
+}
+
+h1.plastrack{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 32px;
+    color:#DFD32B;
+    text-shadow: 2px 1px 1px #333;
+}
+h2.subtitle{
+    text-align: center;
+    font-family: 'Manjari', sans-serif;
+    font-size: 16px;
+    color:#15203B;
+}
+
+.modal-title {
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+font-size: 20px;
+  color: white;
+  background-color: #8C9EC0;
+  margin: 0px 0px 20px 0px;
+  line-height: 20px;
+  padding: 20px;
+  text-shadow: 2px 1px 1px #5F77A6;
+}
+
+
+.wrapper{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.modal {
+    overflow: inherit;
+    overflow-y: inherit;
+    text-align: center;
+    padding: 0;
+    outline: none;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -6px;
+}
+
+.modal-dialog {
+    width: 90%;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.modal-content {
+    background-color: #efefef;
+    overflow: auto;
+    border: 0;
+    border-radius: 0;
+}
+
+.modal-header {
+    border: 0;
+    padding 0;
+    position: relative;
+}
+
+.modal-header .close {
+    margin: 0;
+    position: fixed;
+    font-size: 15px;
+    top: -10px;
+    right: -10px;
+    width: 23px;
+    height: 23px;
+    padding-bottom: 5px;
+    border-radius: 23px;
+    background-color: #A61315;
+    color: white;
+    opacity: 1;
+    z-index: 99999;
+}
+
+.modal-content p {
+  padding: 0 20px;
+}
+
+.modal-body {
+    padding: 0 0 10px 0;
+    padding: 10px;
+    height: 60vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+

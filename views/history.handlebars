@@ -1,0 +1,140 @@
+<html>
+
+<head>
+	<title>{{title}}</title>
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<link href = "css/bootstrap.min.css" rel = "stylesheet">
+	<link href = "css/bootstrap-theme.min.css" rel = "stylesheet">
+	<link href = "css/loghistory.css" rel = "stylesheet">
+	<link href = "css/navbar.css" rel = "stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="col-xs-12" id=space>
+		<div class="jumbotron navigation-bar">
+			<div class="dropdown">
+				<img id = side-button src="assets/hamburger.png" style="max-width:100%; max-height:100%;"></img>
+				<div class="dropdown-content">
+					{{#each navLink}}
+				<a class="links-hidden" href="{{url}}"><p class="dropdown-font"><p>{{title}}</p></a>
+				{{/each}}
+				</div>
+			</div>
+			
+				{{#each navIcon}}
+				<div class="home-btn">
+					<button class="settings">
+						<a href="{{url}}"><img src="{{src}}" style="max-width:75%; max-height:75%;"></img></a>
+					</button>
+				</div>
+				{{/each}}
+		</div>
+	</div>
+	
+<div class="container">
+	<div class ="row">
+		<div class = "col-xs-10 col-xs-offset-1 title">
+				<h1 class = "plastrack" >Your Log History</h1>
+		</div>
+	</div>
+	
+	
+	
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="all-buttons">
+  			<button class="stats-button" id=today>Today</button>
+  			<button class="stats-button" id=week>Last 7 Days</button>
+  			<button class="stats-button"id=month>Last 30 Days</button>
+			</div> 
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12" style="height: 20px;">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12 num-stats" >
+			<div class="plastic-num" id = all>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-6 col-xs-offset-3 num-stats" id = total-desc>
+			<div class="plastic-num1" style="margin-top:-20px;">
+				<h2>Total Plastics</h2>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row general-stats">
+		<div class="col-xs-4">
+			<div class="plastic-num" id = small>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="plastic-num" id = medium>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="plastic-num"id = large>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row general-stats">
+		<div class="col-xs-4 num-stats">
+			<div class="plastic-num1">
+				small
+			</div>
+		</div>
+		<div class="col-xs-4 num-stats" >
+			<div class="plastic-num1">
+				medium
+			</div>
+		</div>
+		<div class="col-xs-4 num-stats">
+			<div class="plastic-num1">
+				large
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="tip">
+				Swipe sideways to see more graphs
+			</div>
+			
+		</div>
+	</div>
+	<div class="row g-row">
+		<div class="graphs">
+			<canvas id = linegraph>
+			</canvas>
+			<canvas id = linegraph1>
+			</canvas>
+		</div>
+	</div>
+</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://momentjs.com/downloads/moment.js"></script>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="https://d3js.org/d3-dispatch.v2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/history.js"></script>
+</body>
+
+</html>

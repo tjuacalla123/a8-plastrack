@@ -1,0 +1,145 @@
+<html>
+
+<head>
+	<title>{{title}}</title>
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<link href = "css/bootstrap.min.css" rel = "stylesheet">
+	<link href = "css/bootstrap-theme.min.css" rel = "stylesheet">
+	<link href = "css/navbar.css" rel = "stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/logdone.css">
+</head>
+
+<body>
+	<div class="col-xs-12" id=space>
+		<div class="jumbotron navigation-bar">
+			<div class="dropdown">
+				<img id = side-button src="assets/hamburger.png" style="max-width:100%; max-height:100%;"></img>
+				<div class="dropdown-content">
+				{{#each navLink}}
+				<a class="links-hidden" href="{{url}}"><p class="dropdown-font"><p>{{title}}</p></a>
+				{{/each}}
+				</div>
+			</div>
+			
+				{{#each navIcon}}
+				<div class="home-btn">
+					<button class="settings">
+						<a href="{{url}}"><img src="{{src}}" style="max-width:75%; max-height:75%;"></img></a>
+					</button>
+				</div>
+				{{/each}}
+		</div>
+	</div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="done">
+          <p>You're Done Logging!</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2 totals">
+        <div class="total-logged" id=total>
+          50
+        </div>
+        <div class="total-plastics">
+          Total Plastics Logged
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="small-med-large">
+          <div class="numbers">
+            
+            <div class="descriptions">  
+              <div class="smalls">
+                0
+              </div>
+              <div class="sm">
+                Small Plastics
+              </div>
+            </div>
+            <div class="descriptions">  
+              <div class="medium">
+                0
+              </div>
+              <div class="med">
+                Medium Plastics
+              </div>
+            </div>
+            <div class="descriptions">  
+              <div class="large">
+                0
+              </div>
+              <div class="lg">
+                Large Plastics
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="list-plastics"></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <a href="/logpage">
+          <div class = "well option" id =log>
+            Log Another Plastic
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <a href="/history">
+          <div class ="well option" id = history>
+            View Log History
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <a href="/share">
+          <div class="well option" id = share>
+            Share your Progress
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/logdone_functions.js"></script>
+  <script src="https://www.wpromotions.eu/confetti.min.js"></script>
+  <script>confetti.start()
+    setTimeout(function() {
+  confetti.stop()
+}, 3000);
+  </script>
+
+</body>
+  
+</html>

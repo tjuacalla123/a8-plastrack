@@ -1,0 +1,102 @@
+.numbers, .descriptions, .smalls, .medium, .large, .sm, .med, .lg, .total-logged, .total-plastics {
+  display: flex;
+}
+
+.totals {
+  height: 15vh;
+  margin-bottom: 2vh;
+}
+
+.total-logged, .total-plastics
+.total-logged {
+  width: 100%;
+  height: 65%;
+  font-size: 50px;
+}
+
+.total-plastics {
+  width: 100%;
+  height: 35%;
+  font-size: 15px;
+}
+.numbers {
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.descriptions {
+  flex-direction: column;
+  width: 30%;
+  height: 10vh;
+  justify-content: flex-start;
+}
+
+.small-med-large {
+  border: 2px solid black;
+  margin-bottom: 2vh;
+}
+
+.smalls, .medium, .large, .sm, .med, .lg, .total-logged, .total-plastics {
+  justify-content: center;
+  align-items: center;
+}
+.smalls, .medium, .large {
+  height: 70%;
+  font-size: 30px;
+}
+.sm, .med, .lg {
+  height: 30%;
+  font-size: 10px;
+}
+.list-plastics {
+  width: 100%;
+  min-height: 5vh;
+  max-height: 20vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid black;
+}
+.divider {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 20%;
+  margin-bottom: 1vh;
+}
+.p-num {
+  margin-left: 20px;
+}
+.p-text {
+  word-wrap: break-word;
+}
+
+.option {
+  margin: 2vh 0px 0px 0px;
+  height: 8vh;
+  padding: 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.done {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin: 1vh 0px 1vh 0px;
+  font-size: 35px;
+}
+
+#share {
+  margin-bottom: 2vh;
+}

@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title> Login </title>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<link href = "css/bootstrap.min.css" rel = "stylesheet">
+		<link href = "css/bootstrap-theme.min.css" rel = "stylesheet">
+		<link href = "css/login.css" rel = "stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400&display=swap" rel="stylesheet">
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     	https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+		<script src="js/loginfirebase.js"></script>
+		<script src="js/facebook.js"></script>
+
+		</head>
+
+		<body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0&appId=3708943232515416&autoLogAppEvents=1" nonce="6Z2OfC5N"></script>
+			<h1> plastrack </h1>
+			<div id="formContainer">
+				<div id = "header"> </div>
+
+				<input type="email" placeholder=" email" id="email" />
+				<input type="password" placeholder=" password" id="password" />
+				<div id="buttons">
+				<button onclick="signIn()" id="signIn"> Sign In </button>
+				<!-- <button onclick="signOut()" id="signOut"> Sign Out </button> -->
+				<p></p>
+				<p> No account? Sign up with Plastrack <a href="/signup">here!</a></p>
+
+				<button onclick="fbsignin()">Sign in with Facebook</button>
+				</div>
+			</div>
+		</body>
+<html>
+

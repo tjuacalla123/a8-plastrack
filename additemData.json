@@ -1,0 +1,39 @@
+{
+	"title": "Add New Plastic type",
+	"navLink" : [
+		{
+		"title": "Homepage",
+		"url" : "/homepage"	
+		},
+		{
+		"title": "Log Plastic",
+		"url" : "/logpage"	
+		},
+		{
+		"title": "Log History",
+		"url" : "/history"	
+		},
+		{
+		"title": "Share",
+		"url" : "/share"	
+		},
+		{
+		"title": "Sustainability Tips",
+		"url" : "/tips"	
+		},
+		{
+		"title": "Settings",
+		"url" : "/settings"	
+		}
+	],
+	"navIcon" : [
+		{
+		"src" : "assets/user_icon_s.png",
+		"url" : "/settings"
+		},
+		{
+		"src" : "assets/home_S.png",
+		"url" : "/homepage"
+		}
+	]
+}

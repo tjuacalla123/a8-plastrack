@@ -1,0 +1,96 @@
+body{
+  font-family: 'Manjari', sans-serif;
+  color: #15203B;
+    font-size: 14px;
+     background-image: linear-gradient(179deg, #8C9EC0 20%, #dfdfdf 30%);
+     background-position: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Manjari', sans-serif;
+    font-size: 16px;
+    color:#15203B;
+    margin: 0;
+}
+
+h1.plastrack{
+  font-family: 'Lexend Deca', sans-serif;
+    font-size: 35px;
+    color:#DFD32B;
+    text-shadow: 2px 1px 1px #333;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+.camera-col, .camera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.camera {
+  width: 100%;
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+.add-pic {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#create-plastic {
+    font-family: 'Lexend Deca', sans-serif;
+  color: white;
+  background-color: #314882;
+  border: none;
+  box-shadow: 5px 5px #15203B;
+  text-shadow: 2px 1px 1px #15203B;
+    outline: none;
+  width: 100%;
+  height: 50px;
+}
+.question, .add-pic, #create-plastic {
+  border-radius: 30px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+}
+
+.camera i {
+  font-size: 40px;
+}
+
+.jumbotron.plastic-list, .add-pic {
+  align-items: center;
+  display: flex;
+}
+
+.jumbotron.plastic-list {
+	border-radius: 30px;
+	height: 200px;
+	width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.jumbotron.plastic-list i {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.icon-list {
+  display: none;
+}

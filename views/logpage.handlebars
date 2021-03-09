@@ -1,0 +1,104 @@
+<html>
+
+<head>
+	<title>{{title}}</title>
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<link href = "css/bootstrap.min.css" rel = "stylesheet">
+	<link href = "css/bootstrap-theme.min.css" rel = "stylesheet">
+	<link href = "css/navbar.css" rel = "stylesheet">
+	<link href = "css/log.css" rel = "stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Milonga&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+ <div class="thewholepage">
+	<div class="col-xs-12" id=space>
+		<div class="jumbotron navigation-bar">
+			<div class="dropdown">
+				<img id = side-button src="assets/hamburger.png" style="max-width:100%; max-height:100%;"></img>
+				<div class="dropdown-content">
+				{{#each navLink}}
+				<a class="links-hidden" href="{{url}}"><p class="dropdown-font"><p>{{title}}</p></a>
+				{{/each}}
+				</div>
+			</div>
+			
+				{{#each navIcon}}
+				<div class="home-btn">
+					<button class="settings">
+						<a href="{{url}}"><img src="{{src}}" style="max-width:75%; max-height:75%;"></img></a>
+					</button>
+				</div>
+				{{/each}}
+		</div>
+	</div>
+
+	<div class ="container" id = "homepage">
+		<div class ="row">
+			<div class = "col-xs-10 col-xs-offset-1 title">
+					<h1 class = "plastrack" >{{title}}</h1>
+			</div>
+		</div>
+		
+		<div class="row">
+			<h2><p class="tip">To log a plastic type, just drag it down to the bin!</p></h2>
+		</div>
+		<div class="row">
+			<h2><p class="tip">Tap the bin when you're finished.</p></h2>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-3">
+				<div class="totals">
+					<p id =total-plastic>0 total plastics logged</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-12 logpage">
+				<div class="jumbotron plastic-list">
+					<form class="search search-plastic" style="margin:auto;max-width:300px">
+						<input type="text" placeholder="Search for type of plastic" name="search2" class="search-bar">
+					</form>
+					 <div class="well plastic-contents"></div> 
+				</div>
+				
+				<div class="trash-add-delete">
+					<div class="well contents" id="loggedTemp">
+					</div>
+					<div class="recycling-bin">
+						<img src="assets/bin_1.png" style="filter:grayscale(100%);" id=trash></img>
+						<p class="tip2">Simply tap on the bin once you're finished!</p>
+					</div>
+					<div class="well add-delete" id = "additem">
+						Add New Type of Plastic 
+					</div>
+					<div class="well add-delete" id = "deleteitem">
+						Delete a Type of Plastic
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/addplastics.js"></script>
+<script src="js/logpage_functions.js"></script>
+<script src="js/drag.js"></script>
+</body>
+
+</html>

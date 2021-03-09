@@ -1,0 +1,150 @@
+body{
+  font-family: 'Manjari', sans-serif;
+  color: #15203B;
+    font-size: 14px;
+     background-image: linear-gradient(179deg, #8C9EC0 20%, #dfdfdf 30%);
+     background-position: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Manjari', sans-serif;
+    font-size: 16px;
+    color:#15203B;
+    margin: 0;
+}
+
+h1.plastrack{
+  font-family: 'Lexend Deca', sans-serif;
+    font-size: 35px;
+    color:#DFD32B;
+    text-shadow: 2px 1px 1px #333;
+}
+
+#today, #week, #month {
+  font-size: 15px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#all {
+  font-family: 'Manjari', sans-serif;
+  font-size: 55px;
+  height: 7vh;
+}
+
+#small, #medium, #large {
+  font-size: 20px;
+}
+#all, #small, #medium, #large, .plastic-num1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.num-stats {
+  margin-bottom: 3vh;
+}
+
+.all-buttons, .stats-button {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+}
+#log-history {
+  margin-bottom: 0px;
+}
+.all-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.stats-button {
+  color: white;
+  background-color: #314882; 
+  border: 2px solid #15203B;
+  width: 33%;
+  height: 50px;
+}
+
+
+#today {
+  border-radius: 20px 0px 0px 20px;
+}
+#month {
+  border-radius: 0px 20px 20px 0px;
+}
+#total-desc {
+  margin-bottom: 20px;
+}
+
+.plastic-num, .plastic-num1 {
+  margin-bottom: 0px;
+  padding: 0;
+}
+.plastic-num {
+  height: 5vh;
+}
+.plastic-num1 {
+  height: 2vh;
+}
+.num-stats {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.date-stats, .graph {
+  border-radius: 30px;
+}
+.general-stats {
+  display: flex;
+  justify-content: center;
+}
+
+.graph-box {
+  margin-top: 20px;
+  border-radius: 30px;
+  width: 100%;
+  height: 345px;
+  background-color: #ccc;
+}
+
+.graphs {
+  height: 50vh;
+  overflow-x: scroll;
+  width: 90%;
+  margin-bottom: 5vh;
+  scroll-snap-type: x mandatory;
+  display: flex; 
+  flex-direction: row;
+  border: 2px solid #15203B;
+}
+
+.g-row {
+  display: flex;
+  justify-content: center;
+}
+
+#linegraph, #linegraph1 {
+  scroll-snap-align: start;
+}
+
+.tip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+   background-color: #8C9EC0;
+   padding: 5px;
+   border-radius: 20px;
+  color: white;
+  margin: 2px;
+   -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  height: 4vh;
+}
+
