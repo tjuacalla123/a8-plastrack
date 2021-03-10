@@ -9,12 +9,9 @@ $(document).ready(function() {
 		var statsToday = lastXDays(dataset, 0);
 		var stats7days = lastXDays(dataset, 7);
 		var stats30days = lastXDays(dataset, 30);
-		console.log(statsToday);
 		// plastic day by day 
 		var last7line = parseProgress(stats7days[1]);
 		var last30line = parseProgress(stats30days[1]);
-		
-		
 		
 		// plastic frequency
 		var todayplastic = parseDict(statsToday[0]);

@@ -2,7 +2,6 @@ $(document).ready(function() {
   var plasticData = JSON.parse(sessionStorage.getItem("logged"));
   var plasticObjects = JSON.parse(sessionStorage.getItem("plastic-types"));
   
-  
   var plastic;
   var totalSmall = 0;
   var totalMedium = 0;
@@ -35,6 +34,22 @@ $(document).ready(function() {
   $(".smalls").html(totalSmall);
   $(".total-logged").html(totalCount);
   sessionStorage.removeItem("logged");
+  
+  $("#undo").click(function() {
+    var undo_log = confirm("Undo your Log?");
+    if (undo_log) {
+      if (totalCount != 0) {
+        var dataset = JSON.parse(localStorage.getItem("data"));
+        dateToday = moment().format("DD/MM/YYYY");
+        logArr = dataset[moment(dateToday, "DD/MM/YYYY")];
+        logArr.pop();
+        localStorage.setItem("data", JSON.stringify(dataset));
+      }
+      window.location.replace("/logpage");
+      alert("Log has been reset.");
+    }
+  })
+  
   
   
   // calculates total size of localStorage, limit is 5mb.

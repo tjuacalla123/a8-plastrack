@@ -18,7 +18,6 @@ $(document).ready(function(){
       return;
     }
     var submit_log = confirm("Log your plastics?\nOK if you want to proceed\nCANCEL to continue logging");
-    console.log(submit_log == true);
     if (submit_log) {
       sessionStorage.removeItem("countItems");
       var logCount = [];
