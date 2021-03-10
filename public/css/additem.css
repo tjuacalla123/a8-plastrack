@@ -42,12 +42,12 @@ h1.plastrack{
   align-items: center;
 }
 .camera {
-  width: 100%;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border: 2px solid black;
   margin-bottom: 20px;
   border-radius: 50%;
+  background-color: white;
 }
 .add-pic {
   width: 100%;
@@ -64,9 +64,10 @@ h1.plastrack{
   border: none;
   box-shadow: 5px 5px #15203B;
   text-shadow: 2px 1px 1px #15203B;
-    outline: none;
+  outline: none;
   width: 100%;
   height: 50px;
+  margin-bottom: 5vh;
 }
 .question, .add-pic, #create-plastic {
   border-radius: 30px;
@@ -74,30 +75,42 @@ h1.plastrack{
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
 }
 
-.camera i {
-  font-size: 40px;
+.camera * {
+  font-size: 80px;
 }
 
-.jumbotron.plastic-list, .add-pic {
+.plastic-list, .add-pic {
   align-items: center;
   display: flex;
 }
 
-.jumbotron.plastic-list {
-	border-radius: 30px;
-	height: 200px;
+.plastic-list {
+	border-radius: 20px;
+	height: 30vh;
 	width: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
   margin-bottom: 10px;
+  padding: 5vh 0px 0px 0px;
+  background-color: white;
 }
 
-.jumbotron.plastic-list i {
-  font-size: 50px;
-  margin-bottom: 10px;
+.plastic-list * {
+  width: 33%;
+  font-size: 60px;
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .icon-list {
   display: none;
+}
+body {
+  background-image: linear-gradient(175deg, #314882, #8C9EC0 22%, #c0c0c0 65%, #8C9EC0 99%);
 }
