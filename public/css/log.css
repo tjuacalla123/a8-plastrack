@@ -42,10 +42,10 @@ h1.plastrack{
 }
 .plastic-list, .trash-add-delete {
 	margin: 0;
-	height: 450px;
+	height: 60vh;
 	width: 100%;
 }
-.jumbotron.plastic-list {
+.plastic-list {
 	width: 40%;
 	padding: 0;
 	border-radius: 30px;
@@ -55,10 +55,13 @@ h1.plastrack{
 	padding-left: 15px;
 }
 .search-plastic {
+  background-color: white;
 	justify-content: center;
 	padding: 10px 10px 10px 10px;
-	height: 20%;
+	height: 10%;
 	width: 100%;
+  margin: 0;
+  border-radius: 10px 10px 0px 0px;
 }
 #trash, .search-bar {
 	width: 100%;
@@ -67,7 +70,7 @@ h1.plastrack{
 	height: 80%;
 }
 .search-bar {
-	height: 40%;
+	height: 100%;
 	font-size: 10px;
 }
 .search-p {
@@ -93,8 +96,8 @@ h1.plastrack{
 }
 .plastic-contents {
 	padding: 30px 15px 30px 15px;
-	height: 80%;
-	border-radius: 0px 0px 30px 30px;
+	height: 90%;
+  border-radius: 0px 0px 10px 10px;
 }
 .single-plastic {
 	height: 70px;
@@ -121,17 +124,17 @@ p {
 	height: 50%;
 }
 .contents, .add-delete {
-	border-radius: 30px;
+	border-radius: 15px;
 	-webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
 }
 .contents {
   visibility: hidden;
   height: 25%;
-	margin-bottom: 5px;
+	margin-bottom: 10%;
 }
 .add-delete{
-	margin: 10px 0px 0px 0px;
+	margin: 5% 0px 0px 0px;
 	height: 5%;
 	display: flex;
 	justify-content: center;
