@@ -29,6 +29,7 @@
   animation: fadeInAnimation ease 1s; 
   animation-iteration-count: 1; 
   animation-fill-mode: forwards;
+  width: 100%;
 }
 .flex-grid-half .col {
   font-family: 'Reem Kufi', sans-serif;
@@ -53,7 +54,9 @@
     text-shadow: 2px 3px 2px #994f05;
     transition: 0.03s;
 }
-
+.col {
+  width: 50%;
+}
 .col p.options a {
   color: white;
   text-shadow: 1px 1px 2px #333;

@@ -64,7 +64,7 @@ $(document).ready(function(){
               }
               
               sessionStorage.setItem("countItems", JSON.stringify(tempCount));    
-              $(this).addClass('ui-state-highlight').find('p').html(name + ' has been added to the bin!');
+              $(this).addClass('ui-state-highlight').find('.tip2').html(name + ' has been added to the bin!');
               
               if($("#loggedTemp").find("#"+id).length == 0) {
                 $("#loggedTemp").append("<div class='divider' id="+id+"></div>");

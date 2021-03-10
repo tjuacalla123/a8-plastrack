@@ -2,7 +2,7 @@ body{
   font-family: 'Manjari', sans-serif;
   color: #15203B;
     font-size: 15px;
-     background-image: linear-gradient(179deg, #8C9EC0 20%, #dfdfdf 30%);
+     background-image: linear-gradient(179deg, #314882, #8C9EC0 20%, #768CB6, #cfcfcf 80%, #c0c0c0 85%, #D2CC76);
      background-position: center;
 }
 
@@ -16,9 +16,9 @@ h2 {
 
 h1.plastrack{
 	font-family: 'Lexend Deca', sans-serif;
-    font-size: 35px;
-    color:#DFD32B;
-    text-shadow: 2px 1px 1px #333;
+  font-size: 35px;
+  color:#DFD32B;
+  text-shadow: 2px 1px 1px #333;
 }
 
 .totals {
@@ -130,7 +130,7 @@ p {
   height: 25%;
 	margin-bottom: 5px;
 }
-.add-delete, a{
+.add-delete{
 	margin: 10px 0px 0px 0px;
 	height: 5%;
 	display: flex;
