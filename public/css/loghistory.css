@@ -31,7 +31,7 @@ h1.plastrack{
 #all {
   font-family: 'Manjari', sans-serif;
   font-size: 55px;
-  height: 7vh;
+  height: 10vh;
 }
 
 #small, #medium, #large {
@@ -41,9 +41,6 @@ h1.plastrack{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.num-stats {
-  margin-bottom: 3vh;
 }
 
 .all-buttons, .stats-button {
@@ -79,7 +76,7 @@ h1.plastrack{
   border-radius: 0px 20px 20px 0px;
 }
 #total-desc {
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
 }
 
 .plastic-num, .plastic-num1 {
@@ -90,7 +87,8 @@ h1.plastrack{
   height: 5vh;
 }
 .plastic-num1 {
-  height: 2vh;
+  height: 3vh;
+  margin-bottom: 2vh
 }
 .num-stats {
   padding-left: 0px;
@@ -141,7 +139,6 @@ h1.plastrack{
   background-color: #8C9EC0;
   padding: 5px;
   color: white;
-  margin: 2px;
    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
   height: 4vh;

@@ -6,13 +6,14 @@ $(document).ready(function() {
 	if (dataset != null) {
 		
 		// datasets
-		var statsToday = today(dataset);
+		var statsToday = lastXDays(dataset, 0);
 		var stats7days = lastXDays(dataset, 7);
 		var stats30days = lastXDays(dataset, 30);
-		
+		console.log(statsToday);
 		// plastic day by day 
 		var last7line = parseProgress(stats7days[1]);
 		var last30line = parseProgress(stats30days[1]);
+		
 		
 		
 		// plastic frequency
@@ -20,17 +21,23 @@ $(document).ready(function() {
 		var plastic7 = parseDict(stats7days[0]);
 		var plastic30 = parseDict(stats30days[0]);
 		
+		setTimeout(function() {
+	    $(".r-tip").slideUp();
+	  }, 5000);
+		
 		$("#today").click(function() {
 			$("#linegraph").data("chart").destroy();$("#linegraph1").data("chart").destroy();
 			$("#linegraph").remove();$("#linegraph1").remove();
 			$(".graphs").append("<canvas id = linegraph></canvas>");$(".graphs").append("<canvas id = linegraph1></canvas>");
 			
 			lineChart(todayplastic, 'bar', "#linegraph");
-			lineChart([["small", "medium", "large"], statsToday[1]], 'pie', "#linegraph1");
-			$("#small").html(statsToday[1][0]);
-			$("#medium").html(statsToday[1][1]);
-			$("#large").html(statsToday[1][2]);
-			$("#all").html(statsToday[2]);
+			lineChart([["small", "medium", "large"], pieC], 'pie', "#linegraph1");
+			
+			var sizetotals = statsToday[2];
+			$("#small").html(sizetotals[0]);
+			$("#medium").html(sizetotals[1]);
+			$("#large").html(sizetotals[2]);
+			$("#all").html(sizetotals[3]);
 		})
 		
 		$("#week").click(function() {
@@ -63,11 +70,15 @@ $(document).ready(function() {
 		})
 		
 		lineChart(todayplastic, 'bar', "#linegraph");
-		lineChart([["small", "medium", "large"], statsToday[1]], 'pie', "#linegraph1");
-		$("#small").html(statsToday[1][0]);
-		$("#medium").html(statsToday[1][1]);
-		$("#large").html(statsToday[1][2]);
-		$("#all").html(statsToday[2]);
+		
+		var sizetotals = statsToday[2];
+		$("#small").html(sizetotals[0]);
+		$("#medium").html(sizetotals[1]);
+		$("#large").html(sizetotals[2]);
+		$("#all").html(sizetotals[3]);
+		var pieC = statsToday[2].slice();
+		pieC.pop();
+		lineChart([["small", "medium", "large"], pieC], 'pie', "#linegraph1");
 	}
 	
 })
@@ -106,35 +117,6 @@ function lineChart(data, chartType, location) {
 	$(location).data("chart", barChart);
 }
 
-
-function today(dataset) {
-	// generate today's stats
-	var statsStuff = {};
-	var dateToday = moment().format("DD/MM/YYYY");
-	var todays = dataset[moment(dateToday, "DD/MM/YYYY")];
-	var smallcount = 0;	var mediumcount = 0;	var largecount = 0;
-	for (log in todays) {
-		var allLogs = todays[log]; // very fast runtime
-		for (item in allLogs) {
-			var plastic = allLogs[item];
-			var keyName = plastic["name"]; // + " ("+ plastic["size"] +")";
-			var val = statsStuff[keyName];
-			if (val == undefined) {
-				statsStuff[keyName] = [plastic["count"], plastic["size"]]
-			}
-			else {
-				statsStuff[keyName][0] += plastic["count"];
-			}
-			if (plastic["size"] == "small") {smallcount += plastic["count"];}
-			else if (plastic["size"] == "medium") {mediumcount += plastic["count"];}
-			else {largecount += plastic["count"];}
-		}
-	}
-	var totalSize = smallcount + mediumcount + largecount;
-	var sizetotals = [smallcount, mediumcount, largecount];
-	return [statsStuff, sizetotals, totalSize];
-}
-
 // totals for each plastic, totals for each date, totals for each size 
 function lastXDays(dataset, days) { 
 	var statsX = {};
@@ -146,7 +128,7 @@ function lastXDays(dataset, days) {
 		
 		var dateToday = moment().format("DD/MM/YYYY");
 		var lastx = moment(dateToday, "DD/MM/YYYY").subtract(days, 'days');
-		if (lastx.isBefore(date)) {
+		if (lastx.isSameOrBefore(date)) {
 			var logDate = allData[date]
 			var datecount = 0;
 			for (log in logDate) {
