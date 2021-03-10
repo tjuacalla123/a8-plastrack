@@ -8,13 +8,7 @@ body{
      background-position: center;
      margin-bottom: 100px;
 }
-.container{
-  color:#DFD32B ;
-  text-align: center;
-  font-color: yellow;
-  font-family: 'Righteous', sans-serif;
-    font-size: 40px;
-}
+
 
 .title{
   /*text-transform: lowercase;*/
