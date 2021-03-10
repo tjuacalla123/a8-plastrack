@@ -49,17 +49,18 @@
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row all-tips">
 			<h2><p class="tip">To log a plastic type, just drag it down to the bin!</p></h2>
 		</div>
-		<div class="row">
-			<h2><p class="tip">Tap the bin when you're finished.</p></h2>
+		<div class="row all-tips">
+			<div class="tip">Tap the bin when you're finished.</div>
 		</div>
 		
 		<div class="row">
 			<div class="col-xs-6 col-xs-offset-3">
 				<div class="totals">
-					<p id =total-plastic>0 total plastics logged</p>
+					<div id =total-plastic>0</div>
+					<div id =total-plastic1>Total plastics logged</div>
 				</div>
 			</div>
 		</div>
@@ -68,7 +69,7 @@
 			<div class="col-xs-12 logpage">
 				<div class="jumbotron plastic-list">
 					<form class="search search-plastic" style="margin:auto;max-width:300px">
-						<input type="text" placeholder="Search for type of plastic" name="search2" class="search-bar">
+						<input type="text" placeholder="Search Plastic" name="search2" class="search-bar">
 					</form>
 					 <div class="well plastic-contents"></div> 
 				</div>
@@ -78,13 +79,13 @@
 					</div>
 					<div class="recycling-bin">
 						<img src="assets/bin_1.png" style="filter:grayscale(100%);" id=trash></img>
-						<p class="tip2">Simply tap on the bin once you're finished!</p>
+						<div class="tip2">Simply tap on the bin once you're finished!</div>
 					</div>
 					<div class="well add-delete" id = "additem">
-						Add New Type of Plastic 
+						Add Plastic Type
 					</div>
 					<div class="well add-delete" id = "deleteitem">
-						Delete a Type of Plastic
+						Delete Plastic Type
 					</div>
 				</div>
 			</div>

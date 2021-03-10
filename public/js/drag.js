@@ -20,7 +20,7 @@ $(document).ready(function(){
     }
     
     totalPlastics = totalPlastics-1;
-    $(".totals").find("#total-plastic").html(totalPlastics + " total plastics logged");
+    $(".totals").find("#total-plastic").html(totalPlastics);
     tempCount[names] = tempCount[names]-1;
     sessionStorage.setItem("countItems", JSON.stringify(tempCount));
   });
@@ -83,7 +83,7 @@ $(document).ready(function(){
               }
               $("#"+id+".divider").data("plasticObject", plasticData);
               totalPlastics++;
-              $(".totals").find("#total-plastic").html(totalPlastics + " total plastics logged");
+              $(".totals").find("#total-plastic").html(totalPlastics);
           },
   
       });

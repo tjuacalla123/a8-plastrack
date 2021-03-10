@@ -1,6 +1,11 @@
 $(document).ready(function(){
   console.log("ready");
   
+  
+  setTimeout(function() {
+    $(".all-tips").slideUp();
+  }, 5000);
+  
   // go to additem page
   $("#additem").click(function() {
     window.location.replace("/additem");
@@ -51,6 +56,17 @@ $(document).ready(function(){
     }
     
   })
+  
+  
+  // prevent enter on search
+  $(document).ready(function() {
+  $(window).keydown(function(e){
+    if(event.keyCode == 13) {
+      e.preventDefault();
+      return false;
+      }
+    });
+  });
   
   // search function/filter
   $(".search-bar").keydown(function() {
