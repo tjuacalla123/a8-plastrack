@@ -4,7 +4,6 @@ $(document).ready(function() {
 	// get data from localStorage
 	var dataset = JSON.parse(localStorage.getItem("data"));
 	if (dataset != null) {
-		
 		// datasets
 		var statsToday = lastXDays(dataset, 0);
 		var stats7days = lastXDays(dataset, 7);

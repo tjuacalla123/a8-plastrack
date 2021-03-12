@@ -85,7 +85,6 @@ $(document).ready(function(){
   
   // toggle delete button, disables dragging function
   $('#deleteitem').click( function() {
-    console.log("yo!");
     $(".single-plastic").toggleClass("deleteable");
     if ($(document).find(".deleteable").length > 0) {
       $(".single-plastic").draggable({disabled: true});
@@ -97,17 +96,19 @@ $(document).ready(function(){
   
   // delete a plastic type
   $(document).on("click", ".deleteable", function() {
-    var plastic = $(this).data("plasticObject");
-    $(this).remove();
-    var plasticTypes = JSON.parse(sessionStorage.getItem("plastic-types"));
-    console.log(plasticTypes[1]);
-    for (i in plasticTypes) {
-      if (equalPlastics(plastic, plasticTypes[i])) {
-        delete plasticTypes[i];
+    var deleteIt = confirm("Delete Plastic Type?");
+    if (deleteIt) {
+      var plastic = $(this).data("plasticObject");
+      $(this).remove();
+      var plasticTypes = JSON.parse(sessionStorage.getItem("plastic-types"));
+      for (i in plasticTypes) {
+        if (equalPlastics(plastic, plasticTypes[i])) {
+          delete plasticTypes[i];
+        }
       }
+      plasticTypes = plasticTypes.filter(plastic => plastic !== null);
+      sessionStorage.setItem("plastic-types", JSON.stringify(plasticTypes));
     }
-    plasticTypes = plasticTypes.filter(plastic => plastic !== null);
-    sessionStorage.setItem("plastic-types", JSON.stringify(plasticTypes));
   })
   
   

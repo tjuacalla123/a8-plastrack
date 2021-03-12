@@ -35,6 +35,7 @@ $(document).ready(function() {
   $(".total-logged").html(totalCount);
   sessionStorage.removeItem("logged");
   
+  // Undo a log
   $("#undo").click(function() {
     var undo_log = confirm("Undo your Log?");
     if (undo_log) {
@@ -42,11 +43,12 @@ $(document).ready(function() {
         var dataset = JSON.parse(localStorage.getItem("data"));
         dateToday = moment().format("DD/MM/YYYY");
         logArr = dataset[moment(dateToday, "DD/MM/YYYY")];
-        logArr.pop();
+        var log = logArr.pop();
         localStorage.setItem("data", JSON.stringify(dataset));
+        sessionStorage.setItem("undo", JSON.stringify(log));
       }
       window.location.replace("/logpage");
-      alert("Log has been reset.");
+      alert("Current Log has been reset.");
     }
   })
   

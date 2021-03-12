@@ -4,6 +4,47 @@ var smallPlastics = 0;
 var mediumPlastics = 0;
 var largePlastics = 0;
 $(document).ready(function(){
+  var countItems = {};
+  
+  // shows the undone logged in logpage
+  var undo = JSON.parse(sessionStorage.getItem("undo"));
+  if (undo != null) {
+    for (plastic in undo) {
+      var loggedP = undo[plastic];
+      var plasticTypes = JSON.parse(sessionStorage.getItem("plastic-types"));
+      
+      var stillExist = false;
+      for (i in plasticTypes) {
+        if (plasticTypes[i]["name"] == loggedP["name"] && plasticTypes[i]["size"] == loggedP["size"]) {
+          stillExist = true;
+          break;
+        }
+      }
+      if (!stillExist) {continue;}
+      
+      var id = loggedP["name"].replace(/\s/g , "-") + "-" + loggedP["size"];
+      var name = loggedP["name"] + " (" + loggedP["size"] + ")";
+      var obj = $(".plastic-contents").find("#"+id);
+      var stuff = obj.data("plasticObject");
+      console.log(obj);
+      stuff["count"] = loggedP["count"];
+      countItems[id] = loggedP["count"];
+      $("#loggedTemp").append("<div class='divider' id="+id+"></div>");
+      $("#"+id+".divider").append("<div class='p-text' id="+id+">"+name+"</div>");
+      $("#"+id+".divider").append("<div class='p-num' id="+id+">"+countItems[id]+"</div>");
+      $("#"+id+".divider").append("<div class='cross' id="+id+">"+ "&#9747;" + "</div>");
+      $("#"+id+".divider").data("plasticObject", stuff);
+      totalPlastics += loggedP["count"];
+    }
+  $(".totals").find("#total-plastic").html(totalPlastics);
+  $(".contents").css("visibility", "visible");
+  sessionStorage.removeItem("undo");
+  }
+  
+  
+  
+  sessionStorage.setItem("countItems", JSON.stringify(countItems));
+  
   
   // removes a log group, on() is for elements that are appended after page loads.
    $(document).on("click", ".divider", function() {
@@ -27,8 +68,7 @@ $(document).ready(function(){
   
   // drag and drop
   $(function() { 
-      var countItems = {};
-      sessionStorage.setItem("countItems", JSON.stringify(countItems));
+      
       $( ".single-plastic" ).draggable({
           appendTo: $("#homepage"),
           helper: "clone",
