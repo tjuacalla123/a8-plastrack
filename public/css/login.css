@@ -13,7 +13,7 @@ font-family: 'Reem Kufi', sans-serif;
 	letter-spacing: -2px;
 	background-color: #768CB6;
 	color: #DFD32B;
-	margin: 100px auto;
+	margin: 10vh auto;
 	padding: 10px;
 	text-align: center;
 	text-shadow: 3px 2px 1px #314882;
@@ -29,8 +29,12 @@ a {
 	box-shadow: 6px 6px 6px #314882;
 	border-radius: 30px;
 	width: 85%;
-	height: 45%;
+	height: 45vh;
 	margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #header{
@@ -38,14 +42,18 @@ a {
 	height:10px;
 }
 
+input {
+  margin-bottom: 2vh;
+  height: 5vh;
+  padding-left: 5%;
+}
 #email {
 	background-color: #768CB6;
 	color: white;
 	width: 90%;
-	height: 40px;
-	padding-left: 5px;
+
 	display: block;
-	margin: 25 auto;
+
 	border: none;
 	outline: none;
 }
@@ -58,18 +66,21 @@ a {
 #password{
 	background-color: #768CB6;
 	color: white;
-	padding-left: 5px;
+	
 	width: 90%;
-	height: 40px;
+
 	display: block;
-	margin: 10 auto;
+
 	border: none;
 	outline: none;
 }
 
 #buttons{
 	width: 90%;
-	margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #signUp{
@@ -94,13 +105,13 @@ a {
 	font-weight: bold;
 	border: none;
 	width: 100%;
-	padding: 15px 15px;
+  height: 8vh;
 	border-radius: 10px;
 	text-align: center;
 	text-decoration: none;
 	box-shadow: 3px 2px 1px #15203B;
-	display: inline-block;
-	font-size: 15px;
+	font-size: 25px;
+  margin-bottom: 2vh;
 }
 
 #signIn2{
