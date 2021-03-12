@@ -24,7 +24,7 @@ h1.plastrack{
 .totals {
   margin: 10px 0px 30px 0px;
   height: 10vh;
-	background-color: #8C9EC0;
+	background-color: #314882;
 	border-radius: 5px; 
 	color: white;
 	  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
@@ -48,14 +48,15 @@ h1.plastrack{
 .plastic-list {
 	width: 40%;
 	padding: 0;
-	border-radius: 30px;
+	border-radius: 20px;
+  background-color: #314882;
 }
 .trash-add-delete {
 	width: 60%;	
-	padding-left: 15px;
+	margin-left: 15px;
 }
 .search-plastic {
-  background-color: white;
+
 	justify-content: center;
 	padding: 10px 10px 10px 10px;
 	height: 10%;
@@ -112,6 +113,7 @@ h1.plastrack{
 	flex-shrink: 0;
 	font-size: 7px;
 	word-wrap: break-word;
+  background-color: white;
 }
 .single-plastic i {
 	font-size: 20px;
@@ -122,24 +124,46 @@ p {
 
 .recycling-bin {
 	height: 50%;
+  text-align: center;
+  position: relative;
+}
+.rec-logo {
+  font-size: 110px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  color: transparent;  
+  text-shadow: 0 0 0 rgb(78, 90, 82);
+  
 }
 .contents, .add-delete {
 	border-radius: 15px;
 	-webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
 }
-.contents {
+.well.contents {
   visibility: hidden;
   height: 25%;
 	margin-bottom: 10%;
+  border-left: 2px solid #5F77A6;
+  border-top: 2px solid #5F77A6;
+  box-shadow: 5px 5px #314882;
 }
 .add-delete{
 	margin: 5% 0px 0px 0px;
-	height: 5%;
+	height: 10%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
   font-size: 12px;
+  border-radius: 15px;
+  color: white;
+  background-color: #8C9EC0;
+  border-left: 2px solid #5F77A6;
+  border-top: 2px solid #5F77A6;
+  box-shadow: 5px 5px #314882;
+  text-shadow: 2px 1px 1px #5F77A6;
 }
 .tip, .tip2 {
 	text-align: center;
@@ -165,7 +189,7 @@ p {
 	margin-bottom: 10px;
 }
 .p-num, .p-text {
-  font-size: 10px;
+  font-size: 15px;
 }
 .p-text {
 	word-wrap: break-word;
@@ -195,4 +219,5 @@ p {
 }
 .cross {
 	color: blue;
+  font-size: 15px;
 }
