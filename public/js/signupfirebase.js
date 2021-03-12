@@ -1,13 +1,12 @@
    // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
-    apiKey: "AIzaSyDlmWHH0CcUff5CvpQIOTd7auxrpkxB75Y",
-    authDomain: "plastrack-login-form.firebaseapp.com",
-    projectId: "plastrack-login-form",
-    storageBucket: "plastrack-login-form.appspot.com",
-    messagingSenderId: "388777565381",
-    appId: "1:388777565381:web:6f201b617746455b9124ac",
-    measurementId: "G-5PH8K66169"
+    apiKey: "AIzaSyD4nlJvHCHDVT7cuDIp-vQh3oK26ddrSwA",
+    authDomain: "a8-plastrack-login.firebaseapp.com",
+    projectId: "a8-plastrack-login",
+    storageBucket: "a8-plastrack-login.appspot.com",
+    messagingSenderId: "335182447635",
+    appId: "1:335182447635:web:ce6ac0467a2448ee80ebe6"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
