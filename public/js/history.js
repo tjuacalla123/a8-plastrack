@@ -79,8 +79,41 @@ $(document).ready(function() {
 	
 })
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
 function lineChart(data, chartType, location) {
+	var labels, xlab, ylab, points, textG;
+	var displayed = true;
+	var colors = [];
+	for (var i = 0; i < data[0].length; i++) {
+		var x = getRandomColor()
+		colors.push(getRandomColor());
+	}
+	if (chartType == "bar") {
+		textG = "Log Frequency of Each Plastic Type"
+		labels = "Plastic Types";
+		xlab = "Plastic Type";
+		ylab = "Frequency"
+	}
+	else if (chartType == "line") {
+		colors = getRandomColor();
+		textG = "Total Plastics Over Time"
+		xlab = "Date";
+		ylab = "Total Amount of Plastics"
+		labels = "Total Plastics";
+	}
+	else {
+		textG = "Plastics by Size"
+		displayed = false;	
+	}
+	
 	
 	var chart = $(location);
 	var barChart = new Chart(chart, {
@@ -88,27 +121,41 @@ function lineChart(data, chartType, location) {
 		data: {
 			labels: data[0],
 			datasets: [{
-				label: 'Amount of plastics',
+				label: labels,
 				data: data[1],
-				backgroundColor: ['blue', 'green', 'red'],
+				backgroundColor: colors,
 				borderWidth: 1,
-				hoverBorderColor: 'black'
 			}]
 		},
 		options: {
+			title: {
+				display: true,
+				text: textG
+			},
 			responsive: true,
       maintainAspectRatio: false,
+			layout: {
+				padding: 0
+			},
 			scales: {
 				yAxes: [{
+					scaleLabel: {
+						display: displayed,
+						labelString: ylab
+					},
 	        ticks: {
 	            min: 0,
 	            stepSize: 5
 	        }
-	    	}]
+	    	}],
+				xAxes: [{
+					scaleLabel: {
+							display: displayed,
+							labelString: xlab
+					}
+				}]
 			}
-			
 		},
-		
 	});
 	$(location).data("chart", barChart);
 }

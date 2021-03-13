@@ -1,16 +1,17 @@
 body{
   font-family: 'Manjari', sans-serif;
   color: #15203B;
-    font-size: 14px;
-     background-image: linear-gradient(179deg, #8C9EC0 20%, #dfdfdf 30%);
-     background-position: center;
+  font-size: 14px;
+  background-image: linear-gradient(179deg, #314882, #8C9EC0 20%, #768CB6, #cfcfcf 80%, #c0c0c0 85%, #D2CC76);
+  /*background-image: linear-gradient(179deg, #8C9EC0 20%, #dfdfdf 30%);*/
+  background-position: center;
 }
 
 h2 {
     text-align: center;
     font-family: 'Manjari', sans-serif;
     font-size: 16px;
-    color:#15203B;
+    color: white;
     margin: 0;
 }
 
@@ -41,6 +42,7 @@ h1.plastrack{
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .all-buttons, .stats-button {
@@ -88,7 +90,7 @@ h1.plastrack{
 }
 .plastic-num1 {
   height: 3vh;
-  margin-bottom: 2vh
+  margin-bottom: 2vh;
 }
 .num-stats {
   padding-left: 0px;
@@ -120,6 +122,7 @@ h1.plastrack{
   display: flex; 
   flex-direction: row;
   border: 2px solid #15203B;
+  background-color: white;
 }
 
 .g-row {
@@ -142,4 +145,11 @@ h1.plastrack{
    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
   height: 4vh;
+  width: 90%;
+  background-color: #314882;
+}
+.r-tip {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }

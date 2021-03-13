@@ -55,7 +55,7 @@
 
 .smalls, .medium, .large, .sm, .med, .lg, .total-logged, .total-plastics {
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
 }
 .smalls, .medium, .large {
   height: 70%;
@@ -93,10 +93,10 @@
 }
 
 .option {
-  margin: 2vh 0px 0px 0px;
-  height: 8vh;
+  margin: 4vh 0px 0px 0px;
+  height: 10vh;
   padding: 0;
-  font-size: 15px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,15 +107,12 @@
 }
 
 .done {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
   margin: 1vh 0px 1vh 0px;
-  font-size: 30px;
+  font-size: 35px;
   font-family: 'Lexend Deca', sans-serif;
   color:#DFD32B;
   text-shadow: 2px 1px 1px #333;
+  text-align: center;
 }
 
 #undo {
