@@ -19,7 +19,7 @@
 		var email = document.getElementById("email");
 		var password = document.getElementById("password");
 		var password2 = document.getElementById("password2");
-		if (password = password2){
+		if (password.value == password2.value){
 		const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
 		promise.catch(e => alert(e.message));
 		
@@ -64,12 +64,15 @@
 		
 		if(user){
 			
+			if (user.displayName !== null) {
+   			console.log("Signed in through facebook");
+   			var name = user.displayName;
+   			 alert("Welcome " + name);
+			} else {	
 			var email = user.email;
-			alert("Welcome user " + email);
-			
-			//Take user to a different or home page
-
-			//is signed in
+			 console.log("Not signed in through facebook");
+			 alert("Welcome " + email);
+			}
 			  console.log("redirect")
   			window.location.href = "/homepage";
 			
@@ -80,18 +83,4 @@
 		}
 		
 	});
-/*
-const signInWithFacebookBtn = document.getElementById('signInWithFacebook');
-function signInWithFacebook () {
-  var facebookProvider = new firebase.auth.FacebookAuthProvider();
-  //Or auth.signInWithRedirect(facebookProvider)
-  auth.signInWithPopup(facebookProvider)
-  .then(function(result){
-    console.log('Signed in successfully !');
-  })
-  .catch(function(error){
-		alert(error.message);
-  });
-}
-signInWithFacebookBtn.addEventListener('click', signInWithFacebook);
-*/
+

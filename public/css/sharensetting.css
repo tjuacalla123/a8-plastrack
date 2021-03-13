@@ -355,6 +355,7 @@ font-size: 20px;
   color: white;
   background-color: #8C9EC0;
   margin: 0px 0px 20px 0px;
+  width: 100%;
   line-height: 20px;
   padding: 20px;
   border-radius: 15px;
@@ -469,3 +470,66 @@ font-size: 20px;
     overflow-y: auto;
 }
 
+#formContainer{
+  background-color: #8C9EC0;
+  box-shadow: 0 12px 16px 0 rgb(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  border-radius: 30px;
+  width: 85%;
+  height: 45%;
+  margin: 10px auto;
+}
+
+#password{
+  background-color: #8C9EC0;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding-left: 5px;
+  width: 90%;
+  height: 40px;
+  display: block;
+  margin: 10 auto;
+  outline: none;
+}
+
+#newPassword, #newPassword2{
+  background-color: #5F77A6;
+  border-radius: 5px;
+  color: white;
+  padding-left: 5px;
+  width: 90%;
+  height: 40px;
+  display: block;
+  margin: 10 auto;
+  border: none;
+  outline: none;
+}
+
+#buttons{
+  width: 90%;
+  margin: auto;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+#changePw{
+  background-color: #314882;
+  box-shadow: 3px 2px 5px #15203B;
+  color: yellow;
+  border: none;
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: auto;
+}
+
+#newPasswordId{
+  display: none;
+}
