@@ -4,7 +4,7 @@ $(document).ready(function(){
   
   setTimeout(function() {
     $(".all-tips").slideUp();
-  }, 5000);
+  }, 20000);
   
   // go to additem page
   $("#additem").click(function() {
@@ -17,7 +17,7 @@ $(document).ready(function(){
       alert("You haven't logged anything yet")
       return;
     }
-    var submit_log = confirm("Log your plastics?\nOK if you want to proceed\nCANCEL to continue logging");
+    var submit_log = confirm("Log your plastics?");
     if (submit_log) {
       sessionStorage.removeItem("countItems");
       var logCount = [];

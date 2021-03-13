@@ -71,8 +71,8 @@ function addPlastics() {
   if ($.trim(plasticName) == '') {
     alert('Please give the plastic a name');
   }
-  else if (!plasticName.match("^[A-Za-z0-9]+$")) {
-    alert('Remove special characters in name (spaces included)');
+  else if (!plasticName.match("^[ A-Za-z0-9]+$")) {
+    alert('Remove special characters in name');
   }
   else if (plasticSize == "...") {
     alert('Please pick a size');

@@ -17,10 +17,6 @@ $(document).ready(function() {
 		var plastic7 = parseDict(stats7days[0]);
 		var plastic30 = parseDict(stats30days[0]);
 		
-		setTimeout(function() {
-	    $(".r-tip").slideUp();
-	  }, 5000);
-		
 		$("#today").click(function() {
 			$("#linegraph").data("chart").destroy();$("#linegraph1").data("chart").destroy();
 			$("#linegraph").remove();$("#linegraph1").remove();
