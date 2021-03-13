@@ -48,7 +48,6 @@ $(document).ready(function() {
         sessionStorage.setItem("undo", JSON.stringify(log));
       }
       window.location.replace("/logpage");
-      alert("Current Log has been reset.");
     }
   })
   

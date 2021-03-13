@@ -10,7 +10,7 @@ $(document).ready(function(){
     displayIcons();
   })
   
-  $(".bi").click(function (){
+  $(".plastic-list i").click(function (){
     var icon = this.outerHTML;
     $(".camera").empty();
     $(".camera").append(icon);

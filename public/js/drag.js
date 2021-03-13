@@ -1,9 +1,6 @@
-//Adapted from ahsteele on Stack Overflow
-var totalPlastics = 0;
-var smallPlastics = 0;
-var mediumPlastics = 0;
-var largePlastics = 0;
+
 $(document).ready(function(){
+  var totalPlastics = 0;
   var countItems = {};
   
   // shows the undone logged in logpage
@@ -26,7 +23,6 @@ $(document).ready(function(){
       var name = loggedP["name"] + " (" + loggedP["size"] + ")";
       var obj = $(".plastic-contents").find("#"+id);
       var stuff = obj.data("plasticObject");
-      console.log(obj);
       stuff["count"] = loggedP["count"];
       countItems[id] = loggedP["count"];
       $("#loggedTemp").append("<div class='divider' id="+id+"></div>");
@@ -47,12 +43,12 @@ $(document).ready(function(){
   
   
   // removes a log group, on() is for elements that are appended after page loads.
-   $(document).on("click", ".divider", function() {
-    var names = $(this).find(".p-text").attr('id');
-    var count = +$(this).find(".p-num").text();
+   $(document).on("click", ".cross", function() {
+    var names = $(this).parent().find(".p-text").attr('id');
+    var count = +$(this).parent().find(".p-num").text();
     var tempCount = JSON.parse(sessionStorage.getItem('countItems'))
     if (count == 1) {
-      $(this).remove();
+      $(this).parent().remove();
     } else {
       $("#"+names+".p-num").html(tempCount[names]-1);
      var plasticData = $("#"+names+".divider").data("plasticObject");

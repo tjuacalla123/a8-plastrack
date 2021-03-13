@@ -112,12 +112,15 @@ h1.plastrack{
 	justify-content: center;
 	z-index: 1;
 	flex-shrink: 0;
-	font-size: 7px;
+	font-size: 8px;
 	word-wrap: break-word;
-  background-color: white;
+  background-color: #DFD32B;
+  box-shadow: 2px 2px black;
+  overflow: hidden;
+  color:  #314882;
 }
 .single-plastic i {
-	font-size: 20px;
+	font-size: 25px;
 }
 p {
 	margin: 0;
@@ -178,7 +181,8 @@ p {
   width: 100%;
   font-size: 10px;
   padding: 0px 5px 0px 5px;
-  box-shadow: 5px 5px black;
+  box-shadow: 5px 5px black; 
+  overflow: hidden;
 }
 .plastic-contents, .contents {
 	overflow-x: hidden;
