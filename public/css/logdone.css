@@ -9,9 +9,7 @@
   background-color: #314882;
   color: white;
   border: none;
-  box-shadow: 5px 5px black;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
+  box-shadow: 5px 5px #15203B;
 }
 .numbers {
   
@@ -22,14 +20,12 @@
   font-size: 50px;
 }
 .small-med-large, .list-plastics{
-  border-top: 2px solid black;
-  box-shadow: 5px 5px black;
+  box-shadow: 5px 5px #15203B;
   color: #314882;
-  
-  border-left: 2px solid black;
-}
+  }
 .small-med-large {
-  background-color: #DFD32B;
+  padding-top: 10px;
+  background-color: #8C9EC0;
 }
 .list-plastics {
   background-color: white;
@@ -119,8 +115,8 @@
   height: 5vh;
   font-size: 10px;
   border-radius: 0;
-  box-shadow: 5px 5px #15203b;
-  background-color: #314882;
+  box-shadow: 5px 5px 5px #4B080A;
+  background-color: #9C2D2F;
   margin-bottom: 10vh;
 }
 
@@ -130,5 +126,5 @@ body {
 }
 
 .option:hover .option {
-  background-color: black;
+  background-color: #15203B;
 }

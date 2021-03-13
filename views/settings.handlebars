@@ -106,7 +106,9 @@
 							<p class="set-text">{{title1}}</p>
 						</div>
 						<div class="set-box">
+							<div id="set-name">
 							{{name}}
+						</div>
 						</div>
 					</div>
 				</div>
@@ -158,13 +160,13 @@
 				<input type="submit" value="Update Password" onclick="changePass()" id="changePw"></div>
 
 	</div></div></div></div>
-
 	<div class="wrapper">
   <div class="row">
     <div class="col-xs-12">
-      <button type="button" class="button" data-toggle="modal" data-target="#myModal2">Add your Name & Occupation &raquo;</button>
+      <button type="button" class="button" data-toggle="modal" data-target="#myModal2" id="nameBtn">Add your Name & Occupation &raquo;</button> 
     </div>
   </div>
+</div>
 </div>
 
 <!-- Modal -->
@@ -186,7 +188,7 @@
 	      <label for="occupation">Occupation:</label>
 	      <input type="text" class="form-control" id="occupation" placeholder="your occupation" name="occupation">
 	    </div>
-	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the info"></input>
+	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the info" onClick="hideBtn()"></input>
 	</form>
 
 	</div>

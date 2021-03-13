@@ -33,4 +33,7 @@ var dataImage = localStorage.getItem('img');
 if (dataImage !== null) {
 bannerImg = document.getElementById('profilePic');
 bannerImg.src = "data:image/" + dataImage;
+} else {
+bannerImg = document.getElementById('profilePic');
+bannerImg.src = "/assets/userpic_placeholder.png";
 }
