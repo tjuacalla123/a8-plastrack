@@ -32,41 +32,48 @@ h1.plastrack{
 }
 
 
-.profile-pic {
-    width: 85px;
-    display: block;
+.profile-img {
+  margin: 0 auto;
+  position: relative;
+  width: 100px;
+}
+
+.profile-thumb {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 50%;
+  box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.1);
+  height: 100px;
+  margin: 0 0 0;
+  padding: 3px;
+  width: 100px;
+}
+
+.upload {
+  bottom: -10px;
+  position: absolute;
+  right: 0;
+}
+
+.upload img {
+  cursor: pointer;
 }
 
 .file-upload {
-    display: inline-block;
-}
-.circle {
-    border-radius: 1000px !important;
-    overflow: hidden;
-    margin-left: 50px;
-    width: 85px;
-    height: 85px;
-    box-shadow: 3px 2px 3px #15203B;
-    z-index: 99;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-.p-image {
-  color: #666666;
-  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-}
-.p-image:hover {
-  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-}
-.upload-button {
-  font-size: 1.2em;
+  display: none !important;
 }
 
-.upload-button:hover {
-  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-  color: #999;
+.upload-button {
+  width:32px;
+  height:32px;
+  background: #FFF;
+  border-radius:50%;
+  border:2px solid #CCC;
+}
+
+.upload-button img {
+  width: 22px;
+  height: 22px;
+  padding:5px 0 0 5px;
 }
 
 
@@ -114,27 +121,15 @@ img {
   background: transparent; 
 }
 
-.flex-grid-half .col2 {
-   display: flex;
-   font-size: 16px;
-   line-height: 15px;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  flex: 0 0 52%;
-  margin: -1px 0px 25px 0px;
-  background: transparent; 
-}
 
-
-.flex-grid-half .col2 #signOut{
+.flex-grid-half .col #signOut{
   font-weight: normal;
   text-decoration: none;
   padding: 10px;
   font-size: 16px;
   color: white;
   background-color: #5F77A6;
-  margin: 5px 0px 0px 0px;
+  margin: 0px -100px 0px 0px;
   line-height: 20px;
   border-radius: 15px;
   border-left: 2px solid #8C9EC0;
@@ -209,9 +204,6 @@ img {
 }
 #sign-out-container {
     display: flex;
-  align-items: center;
-    justify-content: space-between;
-  margin: auto;
   width: 50%;
   height: 50px;
 }

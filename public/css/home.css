@@ -45,6 +45,17 @@
   transition: 0.2s;
 }
 
+#profilePic{
+  background: #314882 none repeat scroll 0 0;
+  border-radius: 50%;
+  box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.1);
+  height: 45px;
+  margin: 0 5 0;
+  margin-top:-7px;
+  padding: 2px;
+  width: 45px;
+}
+
 #log{
     background: #314882;
   }
