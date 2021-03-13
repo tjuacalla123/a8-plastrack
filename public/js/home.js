@@ -16,7 +16,7 @@
 	
 	
 	auth.onAuthStateChanged(function(user){
-		if(user){
+		/*(user){
 		if (user.displayName !== null){
 			var address = user.displayName;
 			console.log(address);
@@ -25,21 +25,12 @@
 			var address = user.email;
 		}
 		$( ".demo-stuff").append(address);
-		/*
-		if(user){
-			
-			
-			if (typeof user.displayName !== undefined) {
-   			var address = user.displayName;
-			} else {var address = user.email;}
-			//alert("Welcome user " + email);
-			//$( "div.demo-stuff" ).html(function() {
-		  	//return email;
-			//});
-
-			$( ".demo-stuff" ).append(address);
-		} else{
-		}
-		*/}
+		}*/
 	});
 
+
+var dataImage = localStorage.getItem('img');
+if (dataImage !== null) {
+bannerImg = document.getElementById('profilePic');
+bannerImg.src = "data:image/" + dataImage;
+}

@@ -62,45 +62,36 @@
 	<div class="flex-grid-half">
 
 	  	<div class="col"> 
+	  		<!---
 	  		<div class="circle">
-       <!-- User Profile Image -->
+
        		<img class="profile-pic" src="/assets/userpic_placeholder.png" >
 
-       <!-- Default Image -->
-       <!-- <i class="fa fa-user fa-5x"></i> -->
-    		 </div>
+    		 </div>-->
+
+    	<div class="profile-img">
+ 		 <img class="profile-thumb" src="/assets/userpic_placeholder.png" id="bannerImg" />
+ 		 <div class="upload">
+    	<div class="upload-button"><img src="https://tinyurl.com/mrphx9r" alt="" /></div>
+   		 <input class="file-upload" type="file" accept="image/*" />
+  		</div>
+		</div>
+
     		</div> 
 
 	  	<div class="col">
 
 	  		<div class="red"> 
     		<div class="green"><div class="displayName"></div></div>
-   			 <div class="blue"><p id="username"></p></div>
+   			 <div class="blue"><p id="username"></p> </div>
+				<div id="sign-out-container">
+	  		<button onclick="signOut()" id="signOut"> Sign Out </button>
+
+	</div>
   			</div>
 
     	 </div>
 	</div> 
-
-     <div class="flex-grid-half">
-
-		<div class="col2">
-				 <div class="p-image">
-	  	 	<!--
-       		<i class="fa fa-camera upload-button"></i>
-       		 <input class="file-upload" type="file" accept="image/*"/>-->
-		<div class="new_Btn">Upload Userpic</div><br>
-		<input id="html_btn" type='file'><br>
-
-     	</div>      
-
-			</div>
-			<div class="col2">
-				<div id="sign-out-container">
-	  		<button onclick="signOut()" id="signOut"> Sign Out </button>
-	  	</div>
-
-	  	</div>
-	</div>
 
 
 </div>
