@@ -95,10 +95,12 @@ h1.plastrack{
   font-size: 12px;
   color: white;
   text-align: center;
-  margin: 0px 5px 0px 5px;
   height: 10%;
+  padding: 0px 10% 0px 10%;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 .plastic-contents, .search-plastic {
 	align-items: center;
