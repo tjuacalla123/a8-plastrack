@@ -24,12 +24,12 @@ $(document).ready(function() {
 	  $(".file-upload").click();
 	});
 
+
  var hide = sessionStorage.getItem('hide');
     if(hide === 'true'){
         $('#nameBtn').hide();
     }
 });
-
 
 
 function hideBtn() {

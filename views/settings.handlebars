@@ -25,6 +25,7 @@
 	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
 	<script src="js/settingsfirebase.js"></script>
 	<script src="js/settings.js"></script>
+
 </head>
 
 <body>
@@ -98,6 +99,11 @@
 
 
 		{{#if friends}}
+
+<script>
+console.log("Hello");
+hideBtn();    
+</script>
 	{{#each friends}}
 				<div class="row">
 				<div class="col-xs-12 share">
@@ -134,7 +140,7 @@
 <div class="wrapper">
  <div class="row">
     <div class="col-xs-12">
-      <button type="button" class="button" data-toggle="modal" data-target="#myModal">Change Your Password &raquo;</button>
+      <button type="button" class="button" data-toggle="modal" data-target="#myModal" id="pwBtn">Change Your Password &raquo;</button>
     </div>
   </div>
 </div>

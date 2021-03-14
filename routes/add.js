@@ -11,4 +11,3 @@ exports.addFriend = function(req, res){
 	data.friends.push(newFriend);
  	res.render('settings.handlebars', data);
 };
-
