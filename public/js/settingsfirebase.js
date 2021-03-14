@@ -19,11 +19,6 @@
 	auth.onAuthStateChanged(function(user){
 		
 		if(user){
-		
-			 //if (typeof user.displayName !== 'undefined') {
-   				//var name = user.displayName;
-			//} else {var name = "Fake Name";}
-			//$('.displayName').append(name);
 
 			if (user.displayName !== null) {
    			console.log("Signed in through facebook");

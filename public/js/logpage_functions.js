@@ -12,7 +12,7 @@ $(document).ready(function(){
   });
   
   // submit and move move data to log done
-  $(".recycling-bin").click(function() {
+  $(".recycling-bin, #secondary-submit").click(function() {
     if ($(".divider").length == 0) {
       alert("You haven't logged anything yet")
       return;
