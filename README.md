@@ -33,6 +33,10 @@ HTML/ CSS
 
 Node.js
 
+JavaScript 
+
+jQuery
+
 Handlebars
 
 Bootstrap
