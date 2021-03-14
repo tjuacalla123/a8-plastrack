@@ -1,6 +1,7 @@
 # a8-plastrack
 
-<i>Plastrack: Keep tabs on your plastic waste by logging your plastic items and tracking your usage trends.</i> 
+<i>[Plastrack](https://a8-plastrack.herokuapp.com/): Keep tabs on your plastic waste by logging your plastic items and tracking your usage trends.</i> 
+(a WIP)
 
 This mobile web app was a collaborative effort between Jane Dinh [@jeinuh](https://github.com/jeinuh/), Timothy Juacalla [@tjuacalla123](https://github.com/tjuacalla123/), and Anand Suresh [@ucsdkayiu](https://github.com/ucsdkayiu) for CSE 170/COGS 120 at UCSD.
 Special thanks to Teaching Assistants for their guidance.
