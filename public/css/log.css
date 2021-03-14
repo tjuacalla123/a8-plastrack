@@ -49,8 +49,9 @@ h1.plastrack{
 .plastic-list {
 	width: 40%;
 	padding: 0;
-	border-radius: 5px;
-  background-color: #5F77A6;
+	border-radius: 15px;
+  background-color: #314882;
+  box-shadow: 5px 5px #15203b;
 }
 .trash-add-delete {
 	width: 60%;	
