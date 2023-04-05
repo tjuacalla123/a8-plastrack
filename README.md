@@ -6,6 +6,9 @@
 This mobile web app was a collaborative effort between Jane Dinh [@jeinuh](https://github.com/jeinuh/), Timothy Juacalla [@tjuacalla123](https://github.com/tjuacalla123/), and Anand Suresh [@ucsdkayiu](https://github.com/ucsdkayiu) for CSE 170/COGS 120 at UCSD.
 Special thanks to Teaching Assistants for their guidance.
 
+## Video:
+https://www.youtube.com/watch?v=maGNlFKJixQ
+
 For educational purposes only.
 
 # Installation
